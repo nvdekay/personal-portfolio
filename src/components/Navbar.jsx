@@ -2,7 +2,9 @@ import logo from "../assets/images/avatars/deekayLogo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { CgMail } from "react-icons/cg";
+
+
 
 
 const Navbar = () => {
@@ -12,10 +14,22 @@ const Navbar = () => {
         </div>
 
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-            <FaLinkedin/>
-            <FaGithub/>
-            <FaFacebook/>
-            <FaInstagram/>
+            <a href="https://www.linkedin.com/in/nvdeekay07" target="_blank" rel="noreferrer"
+                className="hover:text-white hover:bg-blue-300 p-2 rounded-lg transition-colors duration-200">
+                <FaLinkedin />
+            </a>
+            <a href="https://github.com/nvdekay" target="_blank" rel="noreferrer"
+                className="hover:text-white hover:bg-blue-300 p-2 rounded-lg transition-colors duration-200">
+                <FaGithub />
+            </a>
+            <a href="https://www.facebook.com/nvdeekay.07" target="_blank" rel="noreferrer"
+                className="hover:text-white hover:bg-blue-300 p-2 rounded-lg transition-colors duration-200">
+                <FaFacebook />
+            </a>
+            <a href="mailto:khanhnvd.work@gmail.com" target="_blank" rel="noreferrer"
+                className="hover:text-white hover:bg-blue-300 p-2 rounded-lg transition-colors duration-200">
+                <CgMail />
+            </a>
         </div>
 
     </nav>
