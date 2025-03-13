@@ -12,10 +12,10 @@ const Navbar = () => {
         </div>
 
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-            <FaLinkedin />
-            <FaGithub />
-            <FaFacebook />
-            <FaInstagram />
+            <FaLinkedin/>
+            <FaGithub/>
+            <FaFacebook/>
+            <FaInstagram/>
         </div>
 
     </nav>
