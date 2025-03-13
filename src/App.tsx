@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Body from "./components/Body";
+import About from "./components/About";
 
 const App = () => {
   return (
@@ -12,9 +13,8 @@ const App = () => {
 
       <div className="container mx-auto px-8">
         <Navbar />
-      </div>
-      <div>
         <Body />
+        <About />
       </div>
 
     </div>
