@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/images/projects/project-1.jpg";
+import project2 from "../assets/images/projects/project-2.jpg";
+import project3 from "../assets/images/projects/project-3.jpg";
+import project4 from "../assets/images/projects/project-4.jpg";
 
 export const HERO_CONTENT = `I am a software engineer with 1 year of experience, but the products I have made are carefully invested. I am also
 an active person at work, constantly learning new skills..

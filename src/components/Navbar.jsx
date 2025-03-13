@@ -1,4 +1,4 @@
-import logo from "../assets/deekayLogo.png";
+import logo from "../assets/images/avatars/deekayLogo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
