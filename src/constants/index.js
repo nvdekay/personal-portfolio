@@ -32,7 +32,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "Cau Giay, Ha Noi, Viet Nam",
+  phoneNo: "+84 123 456 789",
+  email: "khanhnvd.work@gmail.com",
 };
