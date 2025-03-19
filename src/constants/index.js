@@ -27,12 +27,12 @@ export const PROJECTS = [
     image: project1,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, pagination and user authentication.",
-    technologies: ["HTML", "CSS", "Boostrap", "JSP", "Servlet", "SQL Server"],
+    technologies: ["JSP", "CSS", "Bootstrap", "Servlet", "SQL Server"],
   },
 ];
 
 export const CONTACT = {
-  address: "Cau Giay, Ha Noi, Viet Nam",
+  address: "Ha Noi, Viet Nam",
   phoneNo: "+84 123 456 789",
   email: "khanhnvd.work@gmail.com",
 };
