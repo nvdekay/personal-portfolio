@@ -2,7 +2,7 @@ import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/images/avatars/deekayProfile.png";
 const Body = () => {
     return (
-        <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+        <div className="my-20 ml-80 mt-72 mb-96 border-b border-neutral-900 pb-4 lg:mb-40">
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center lg:items-start">
