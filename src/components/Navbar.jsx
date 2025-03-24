@@ -10,7 +10,7 @@ import { FaHome, FaUser, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 const Navbar = () => {
     return (
-        <nav className="fixed left-0 top-0 h-full w-[250px] shadow-md border-r border-purple-300 flex flex-col justify-between py-6 z-50">
+        <nav className="fixed left-0 top-0 h-full w-[250px] shadow-md border-r bg-black flex flex-col justify-between py-6 z-50">
             {/* Logo */}
             <div className="flex flex-col items-center">
                 <a href="/">
