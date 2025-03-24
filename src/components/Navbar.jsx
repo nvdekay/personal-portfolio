@@ -22,25 +22,25 @@ const Navbar = () => {
                 {/* Navigation Links */}
                 <ul className="flex flex-col gap-6 text-lg font-semibold">
                     <li>
-                        <a href="#home" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
+                        <a href="" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
                             <FaHome className="text-xl" />
                             <span className="uppercase tracking-widest">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#about" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
+                        <a href="" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
                             <FaUser className="text-xl" />
                             <span className="uppercase tracking-widest">About</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#works" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
+                        <a href="" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
                             <FaBriefcase className="text-xl" />
                             <span className="uppercase tracking-widest">My Works</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
+                        <a href="" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-800">
                             <FaEnvelope className="text-xl" />
                             <span className="uppercase tracking-widest">Contact</span>
                         </a>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            {/* Social Links (Bottom) */}
+            {/* Social Links */}
             <div className="flex justify-center gap-4 text-2xl pb-4">
                 <a href="https://www.linkedin.com/in/nvdeekay07" target="_blank" rel="noreferrer"
                     className="hover:text-white hover:bg-blue-300 p-2 rounded-lg transition-colors duration-200">
