@@ -23,7 +23,13 @@ const iconVariants = (duration) => ({
 const Technologies = () => {
     return (
         <div className="my-20 ml-80 mt-72 mb-96">
-            <h1 className="my-20 text-center text-4xl font-bold">Technologies</h1>
+            <motion.h1
+                initial={{ opacity: 0, y: -120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="my-20 text-center text-4xl">Technologies
+            </motion.h1>
+            
             <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}

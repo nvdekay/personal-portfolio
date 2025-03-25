@@ -1,9 +1,34 @@
 import { EXPERIENCES } from "../constants"
+import { motion } from "framer-motion"
 
+
+const iconVariants = (delay) => ({
+    initial: {
+        opacity: 0,
+        y: -100,
+        transition: {
+            duration: 0.5,
+            delay: delay,
+        },
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            delay: delay,
+        },
+    },
+})
 const Experience = () => {
     return (
         <div className="my-20 ml-80 mt-72 mb-96">
-            <h1 className="my-20 text-center text-4xl">Experience</h1>
+            <motion.h1
+                initial={{ opacity: 0, y: -120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="my-20 text-center text-4xl">Work Experience
+            </motion.h1>
             <div>
                 {EXPERIENCES.map((experience, index) => (
                     <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
