@@ -24,7 +24,11 @@ const Technologies = () => {
     return (
         <div className="my-20 ml-80 mt-72 mb-96">
             <h1 className="my-20 text-center text-4xl font-bold">Technologies</h1>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5 }}
+                className="flex flex-wrap items-center justify-center gap-4">
                 <motion.div
                     variants={iconVariants(2)}
                     initial="initial"
@@ -60,7 +64,7 @@ const Technologies = () => {
                     className="rounded-2xl border-4 border-neutral-800 p-4">
                     <DiNodejs className="text-7xl text-green-400" />
                 </motion.div>
-            </div>
+            </motion.div>
         </div>
     );
 };
