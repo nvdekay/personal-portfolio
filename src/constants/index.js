@@ -14,7 +14,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 export const EXPERIENCES = [
   {
     year: "2023 - Present",
-    role: "Senior Full Stack Developer",
+    role: "Software Engineer",
     company: "JS Club.",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
     technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
@@ -28,6 +28,7 @@ export const PROJECTS = [
     image: project1,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, pagination and user authentication.",
+    github: "https://github.com/nvdekay/boost-your-style",
     technologies: ["JSP", "Bootstrap", "Servlet", "SQL Server"],
   },
   {
@@ -36,7 +37,8 @@ export const PROJECTS = [
     image: project2,
     description:
       "My personal portfolio website showcasing my skills and projects.",
-    technologies: ["React.js", "Tailwind CSS", "Node.js"],
+    github: "https://github.com/nvdekay/personal-portfolio",
+    technologies: ["React.js", "Tailwind CSS", "Framer Motion"],
   },
 ];
 
