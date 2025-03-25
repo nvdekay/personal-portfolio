@@ -23,7 +23,7 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    year: "2023 - Present",
+    year: "March 2023",
     title: "E-Commerce Website",
     image: project1,
     description:
@@ -31,12 +31,12 @@ export const PROJECTS = [
     technologies: ["JSP", "Bootstrap", "Servlet", "SQL Server"],
   },
   {
-    year: "2023 - Present",
-    title: "E-Commerce Website",
-    image: project1,
+    year: "April 2025",
+    title: "Personal Portfolio",
+    image: project2,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, pagination and user authentication.",
-    technologies: ["JSP", "Bootstrap", "Servlet", "SQL Server"],
+      "My personal portfolio website showcasing my skills and projects.",
+    technologies: ["React.js", "Tailwind CSS", "Node.js"],
   },
 ];
 
