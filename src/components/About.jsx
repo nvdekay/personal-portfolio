@@ -20,7 +20,7 @@ const About = () => {
                 <motion.div
                     initial={{ x: -200, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1.5 }}
+                    transition={{ duration: 1 }}
                     className="w-full lg:w-1/2 lg:p-8"
                 >
                     <div className="flex items-center justify-center">

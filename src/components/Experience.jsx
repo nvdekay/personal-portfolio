@@ -1,25 +1,6 @@
 import { EXPERIENCES } from "../constants"
 import { motion } from "framer-motion"
 
-
-const iconVariants = (delay) => ({
-    initial: {
-        opacity: 0,
-        y: -100,
-        transition: {
-            duration: 0.5,
-            delay: delay,
-        },
-    },
-    animate: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.5,
-            delay: delay,
-        },
-    },
-})
 const Experience = () => {
     return (
         <div className="my-20 ml-80 mt-72 mb-96">
@@ -32,10 +13,18 @@ const Experience = () => {
             <div>
                 {EXPERIENCES.map((experience, index) => (
                     <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-                        <div className="w-full lg:w-1/4">
+                        <motion.div
+                            initial={{ x: -200, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1 }}
+                            className="w-full lg:w-1/4">
                             <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
-                        </div>
-                        <div className="w-full max-w-xl lg:w-3/4">
+                        </motion.div>
+                        <motion.div
+                            initial={{ x: 200, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1 }}
+                            className="w-full max-w-xl lg:w-3/4">
                             <h6 className="mb-2 font-semibold">{experience.role} - {" "}
                                 <span className="text-sm text-purple-200">
                                     {experience.company}
@@ -47,7 +36,7 @@ const Experience = () => {
                                     {technology}
                                 </span>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
             </div>
