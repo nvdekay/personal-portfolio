@@ -20,61 +20,33 @@ const container = (delay) => ({
 })
 
 const StyledContact = styled.div`
-  button {
-    position: relative;
-    border: none;
-    padding: 0;
+
+.button {
+    line-height: 1;
+    background-color: transparent;
     cursor: pointer;
-    outline-offset: 4px;
-    transition: filter 250ms;
-    user-select: none;
-    touch-action: manipulation;
-  }
-
-  .shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    will-change: transform;
-    transform: translateY(2px);
-    transition: transform
-        600ms
-        cubic-bezier(.3, .7, .4, 1);
-  }
-
-  .edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-  }
-
-  .front {
-    display: block;
-    position: relative;
-    padding: 12px 27px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    color: white;
-    background: rgb(91, 91, 240);
-    will-change: transform;
-    transform: translateY(-4px);
-    transition: transform
-        600ms
-        cubic-bezier(.3, .7, .4, 1);
-  }
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: .75em 1em;
+    color: #fff;
+    border: 0px solid transparent;
+    font-weight: 600;
+    border-radius: 2em;
+    font-size: 1rem;
+    box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+    background: linear-gradient(
+      90deg,
+      rgba(77, 54, 208, 1) 0%,
+      rgba(132, 116, 254, 1) 100%
+    );
+}
 
   button:hover {
     filter: brightness(110%);
   }
 
   button:hover .front {
-    transform: translateY(-6px);
     transition: transform
         250ms
         cubic-bezier(.3, .7, .4, 1.5);
@@ -83,235 +55,48 @@ const StyledContact = styled.div`
   button:active .front {
     transform: translateY(-2px);
     transition: transform 34ms;
-  }
-
-  button:hover .shadow {
-    transform: translateY(4px);
-    transition: transform
-        250ms
-        cubic-bezier(.3, .7, .4, 1.5);
-  }
-
-  button:active .shadow {
-    transform: translateY(1px);
-    transition: transform 34ms;
-  }
-
-  button:focus:not(:focus-visible) {
-    outline: none;
   }`;
 
 const StyledDownload = styled.div`
-  .container {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .label {
+  .button {
+    line-height: 1;
     background-color: transparent;
-    border: 2px solid rgb(91, 91, 240);
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    width: 160px;
     cursor: pointer;
-    transition: all 0.4s ease;
-    padding: 5px;
-    position: relative;
-  }
-
-  .label::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    width: 8px;
-    height: 8px;
-    transition: all 0.4s ease;
-    border-radius: 100%;
-    margin: auto;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .label .input {
-    display: none;
-  }
-
-  .label .title {
-    font-size: 1.1rem;
-    color: #fff;
-    transition: all 0.4s ease;
-    position: absolute;
-    right: 12px;
-    bottom: 14px;
-    text-align: center;
-  }
-
-  .label .title:last-child {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .label .circle {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    background-color: rgb(91, 91, 240);
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: all 0.4s ease;
-    position: relative;
-    box-shadow: 0 0 0 0 rgb(255, 255, 255);
-    overflow: hidden;
-  }
-
-  .label .circle .icon {
+    gap: 0.35em;
+    padding: .75em 1em;
+    padding-right: 1.25em;
     color: #fff;
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.4s ease;
+    border: 0px solid transparent;
+    font-weight: 600;
+    border-radius: 2em;
+    font-size: 1rem;
+    box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+    background: linear-gradient(
+      90deg,
+      rgba(77, 54, 208, 1) 0%,
+      rgba(132, 116, 254, 1) 100%
+    );
   }
 
-  .label .circle .square {
-    aspect-ratio: 1;
-    width: 15px;
-    border-radius: 2px;
-    background-color: #fff;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.4s ease;
+  .button__icon {
+    width: 1em;
+    height: 1em;
   }
 
-  .label .circle::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #3333a8;
-    width: 100%;
-    height: 0;
-    transition: all 0.4s ease;
+  .button:hover {
+    filter: brightness(110%);
   }
 
-  .label:has(.input:checked) {
-    width: 57px;
-    animation: installed 0.4s ease 3.5s forwards;
+  .button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
   }
-
-  .label:has(.input:checked)::before {
-    animation: rotate 3s ease-in-out 0.4s forwards;
-  }
-
-  .label .input:checked + .circle {
-    animation:
-      pulse 1s forwards,
-      circleDelete 0.2s ease 3.5s forwards;
-    rotate: 180deg;
-  }
-
-  .label .input:checked + .circle::before {
-    animation: installing 3s ease-in-out forwards;
-  }
-
-  .label .input:checked + .circle .icon {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .label .input:checked ~ .circle .square {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .label .input:checked ~ .title {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .label .input:checked ~ .title:last-child {
-    animation: showInstalledMessage 0.4s ease 3.5s forwards;
-  }
-
-  @keyframes pulse {
-    0% {
-      scale: 0.95;
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-    }
-    70% {
-      scale: 1;
-      box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
-    }
-    100% {
-      scale: 0.95;
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
-  }
-
-  @keyframes installing {
-    from {
-      height: 0;
-    }
-    to {
-      height: 100%;
-    }
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(-90deg) translate(27px) rotate(0);
-      opacity: 1;
-      visibility: visible;
-    }
-    99% {
-      transform: rotate(270deg) translate(27px) rotate(270deg);
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-
-  @keyframes installed {
-    100% {
-      width: 150px;
-      border-color: rgb(35, 174, 35);
-    }
-  }
-
-  @keyframes circleDelete {
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-
-  @keyframes showInstalledMessage {
-    100% {
-      opacity: 1;
-      visibility: visible;
-      right: 56px;
-    }
+    .button:active .button__text {
+      transform: translateY(-2px);
+      transition: transform 34ms;
   }`;
-
 
 
 const Body = () => {
@@ -352,32 +137,30 @@ const Body = () => {
                             {HERO_CONTENT}
                         </motion.p>
 
-                        <div>
+                        <div className="flex flex-wrap">
                             <StyledContact>
                                 <motion.button
-                                    initial={{ y: 100, opacity: 0 }}
+                                    initial={{ y: 150, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: 1, delay: 1.2 }}
-                                    onclick="window.location.href='contact.jsx'">
-                                    <span className="shadow" />
-                                    <span className="edge" />
-                                    <span className="front text"> Contact me
-                                    </span>
+                                    transition={{ duration: 1.5, delay: 1.2 }}
+                                    className="button">
+                                    <span className="front text"> Contact me </span>
                                 </motion.button>
                             </StyledContact>
-                            <StyledDownload>
-                                <div className="container">
-                                    <label className="label">
-                                        <input type="checkbox" className="input" />
-                                        <span className="circle"><svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 19V5m0 14-4-4m4 4 4-4" />
-                                        </svg>
-                                            <div className="square" />
-                                        </span>
-                                        <p className="title">My Resume</p>
-                                        <p className="title">Done</p>
-                                    </label>
-                                </div>
+                            <StyledDownload className="ml-6">
+                                <motion.button
+                                initial={{ y: 150, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 1.5, delay: 1.8 }}
+                                className="button">
+                                    <svg strokeLinejoin="round" strokeLinecap="round" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" height={40} width={40} className="button__icon" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="none" d="M0 0h24v24H0z" stroke="none" />
+                                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                        <path d="M7 11l5 5l5 -5" />
+                                        <path d="M12 4l0 12" />
+                                    </svg>
+                                    <span className="button__text">Resume</span>
+                                </motion.button>
                             </StyledDownload>
                         </div>
                     </div>
