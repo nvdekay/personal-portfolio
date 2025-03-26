@@ -101,7 +101,7 @@ const StyledDownload = styled.div`
 
 const Body = () => {
     return (
-        <div className="my-20 ml-80 mt-72 mb-96 pb-6 lg:mb-40">
+        <div className="ml-80 my-52 mb-96 pb-6 lg:mb-40">
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center lg:items-start">
